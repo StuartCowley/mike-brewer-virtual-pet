@@ -65,5 +65,14 @@ describe('constructor', () => {
       });
      
     
+      describe('walk',() => {
+         it('expect walk', () => {
+            const pet = new Pet('Fat Pet'); 
+            
+            pet.walk();
+            expect(pet.walk).toEqual(pet.fitness += 4);
+         })
+      })
+    
   });
   

@@ -10,6 +10,10 @@ Pet.prototype.growUp = function () {
     this.fitness -= 3;
 };
 
+Pet.prototype.walk = function () {
+    // QUESTION: why doesn't this.walk = this.fitness += 4; work? it produces 18 instead of 14.
+    this.walk = this.fitness + 4;
+}
 
 
 module.exports = Pet;
