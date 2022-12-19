@@ -66,7 +66,7 @@ describe('constructor', () => {
      
     
       describe('walk',() => {
-         it('expect walk', () => {
+         it('increases fitness by 4', () => {
             const pet = new Pet('Fat Pet'); 
             
             pet.fitness = 4;
@@ -74,7 +74,14 @@ describe('constructor', () => {
             expect(pet.fitness).toEqual(8);
          })
 
-      })
+            it('increases fitness to a maximum of 10', () => {
+                const pet = new Pet('Dave');
+                pet.fitness = 8;
+                pet.walk();
+                expect(pet.fitness).toEqual(10);
+            })
+         })
+      
     
   });
   
